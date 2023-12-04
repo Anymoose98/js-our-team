@@ -59,8 +59,7 @@ for(let i=0 ; i <= dipendenti.length; i++){
     let lavoratore = dipendenti[i];
     // creo il div 
     let personale = document.createElement("div");
-    personale.classList.add("col-4")
-    personale.classList.add("m-10")
+    personale.classList.add("col-4", "m-10");
 
     // Aggiungo il testo al div
     
