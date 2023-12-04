@@ -1,3 +1,5 @@
+// Aggiungo informazioni
+
 let dipendenti = [
     {
         "nome" : "Wayne Barnett",
@@ -35,12 +37,42 @@ let dipendenti = [
         "image" : "barbara-ramos-graphic-designer.jpg",
     },
 ]
+// controllo se funziona
+console.log(dipendenti)
 
-// console.log(dipendenti)
 
-for(let i=0 ; i <= dipendenti.length; i++){
+// Espongo tutto in maniera estesa
+for(let i=0 ; i < dipendenti.length; i++){
     let lavoratore = dipendenti[i]
-    console.log(`Nome: ${lavoratore.nome}`);
-    console.log(`Ruolo: ${lavoratore.role}`);
-    console.log(`Immagine: ${lavoratore.image}`);
+    console.log(lavoratore["nome"]);
+    console.log(lavoratore["role"]);
+    console.log(lavoratore["image"]);
+}
+
+// Prendo il contenitore dal HTML
+let contenitore = document.getElementById("contenitore")
+
+
+// Scrivo su html 
+for(let i=0 ; i <= dipendenti.length; i++){
+    
+    let lavoratore = dipendenti[i];
+    // creo il div 
+    let personale = document.createElement("div");
+
+    // Aggiungo il testo al div
+    
+    let nome = document.createElement("div")
+    nome.textContent = lavoratore["nome"] 
+    personale.appendChild(nome);
+    
+    let role = document.createElement("div")
+    role.textContent = lavoratore["role"] 
+    personale.appendChild(role);
+
+    let image = document.createElement("div")
+    image.textContent = lavoratore["image"] 
+    personale.appendChild(image);
+
+    contenitore.appendChild(personale);
 }
