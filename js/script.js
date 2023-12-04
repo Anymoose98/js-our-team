@@ -36,4 +36,11 @@ let dipendenti = [
     },
 ]
 
-console.log(dipendenti)
+// console.log(dipendenti)
+
+for(let i=0 ; i <= dipendenti.length; i++){
+    let lavoratore = dipendenti[i]
+    console.log(`Nome: ${lavoratore.nome}`);
+    console.log(`Ruolo: ${lavoratore.role}`);
+    console.log(`Immagine: ${lavoratore.image}`);
+}
