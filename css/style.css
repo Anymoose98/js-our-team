@@ -16,7 +16,12 @@ body{
 }
 
 .m-10{
-   text-align: center;
+    text-align: center;
     margin-bottom: 30px;
     margin-top: 10px;
 }
+
+.bordo{
+    border: solid 1px black;
+}
+
