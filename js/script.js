@@ -4,7 +4,7 @@ let dipendenti = [
     {
         "nome" : "Wayne Barnett",
         "role" : "Founder & CEO",
-        "image" : "wayne-barmett-founder-ceo.jpg",
+        "image" : "wayne-barnett-founder-ceo.jpg",
     },
 
     {
@@ -16,7 +16,7 @@ let dipendenti = [
     {
         "nome" : "Walter Gordon",
         "role" : "Office Manager",
-        "image" : "walter-gordon-office-menager.jpg",
+        "image" : "walter-gordon-office-manager.jpg",
     },
 
     {
@@ -37,11 +37,12 @@ let dipendenti = [
         "image" : "barbara-ramos-graphic-designer.jpg",
     },
 ]
+
 // controllo se funziona
 console.log(dipendenti)
 
 
-// Espongo tutto in maniera estesa
+// Espongo tutto in maniera estesa su console
 for(let i=0 ; i < dipendenti.length; i++){
     let lavoratore = dipendenti[i]
     console.log(lavoratore["nome"]);
@@ -52,27 +53,34 @@ for(let i=0 ; i < dipendenti.length; i++){
 // Prendo il contenitore dal HTML
 let contenitore = document.getElementById("contenitore")
 
-
 // Scrivo su html 
 for(let i=0 ; i <= dipendenti.length; i++){
     
     let lavoratore = dipendenti[i];
     // creo il div 
     let personale = document.createElement("div");
+    personale.classList.add("col-4")
+    personale.classList.add("m-10")
 
     // Aggiungo il testo al div
     
-    let nome = document.createElement("div")
+    // foto
+    let image = document.createElement("img")
+    let percorso = ("./img/" + lavoratore["image"])
+    image.src = percorso 
+    personale.appendChild(image);
+
+    // nome
+    let nome = document.createElement("h3")
+    nome.classList.add("grassetto")
     nome.textContent = lavoratore["nome"] 
     personale.appendChild(nome);
     
+    // ruolo
     let role = document.createElement("div")
     role.textContent = lavoratore["role"] 
     personale.appendChild(role);
 
-    let image = document.createElement("div")
-    image.textContent = lavoratore["image"] 
-    personale.appendChild(image);
 
     contenitore.appendChild(personale);
 }

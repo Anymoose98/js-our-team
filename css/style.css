@@ -3,3 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+header{
+    background-color: #fff;
+}
+body{
+    background-color: rgb(235, 233, 233);
+}
+
+.grassetto{
+    font-weight: bold;
+}
+
+.m-10{
+   text-align: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
